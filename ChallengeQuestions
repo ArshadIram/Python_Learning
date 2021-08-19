@@ -1,0 +1,10 @@
+Compute & Return Maximum: 
+
+Problem Statement:
+Implement the findMaximum function that receives two numbers as arguments x and y and returns the maximum of the numbers.
+
+def findMaximum(x,y):
+     if x> y:
+          return x
+     else:
+          return y
