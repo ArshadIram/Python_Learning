@@ -8,3 +8,20 @@ def findMaximum(x,y):
           return x
      else:
           return y
+
+Second solution is:
+
+def findMaximum(x, y):
+  max2 = 0
+  if(x > y):
+    max2 = x
+  else:
+    max2 = y
+  return max2
+print(findMaximum(3, 2))
+
+Third solution is:
+
+def findMaximum(x,y):
+  max2 = max(x, y) #create a variable max2 
+  return max2 #returns the maximum of two numbers x and y
