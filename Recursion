@@ -1,0 +1,41 @@
+What Is Recursion? 
+
+Recursion is when a ​function calls itself again and again until it reaches the base condition.
+
+Parts of a Recursion:
+
+There are two parts of recursion: base condition and recursive function.
+
+For instance, take the example of a Factorial function.
+
+Factorial(!) of a number n is the product of all positive numbers from our chosen number n down to 1.
+
+factorial(n) = 0   if n is 0 #base case
+                        
+factorial (n) = n * factorial(n-1) #recursive function  
+
+Let’s use an example of factorial of 5.
+
+5! = 5 × 4!
+   = 5 × 4 × 3!
+   = 5 × 4 × 3 ×2! 
+   = 5 × 4 ×3 ×2 ×1
+   = 120 
+   
+   Compute nth Fibonacci Number
+   
+   Problem Statement:Implement the Fibonacci function that takes a number n and calculates the nth Fibonacci.
+   
+   def fibonacci(n):
+  counter = 0 
+  first = 0 
+  second = 1
+  temp = 0
+  while counter <= n:
+       temp = first + second 
+       first = second 
+       second = temp
+       counter = counter + 1
+       
+  Logic is: You have two numbers in the series 0, 1 
+  so the logic is each time the next number is the series is sum up of previous two numbers. 
