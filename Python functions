@@ -1,0 +1,21 @@
+Non_parameter function: A function that does not contain parameters is a non-parameterized function.
+
+def do_hello():
+  print("Hello")
+  print("World")
+do_hello()
+
+Parameterized function: Functions that can receive parameters are parameterized functions.
+
+def add_one(val):
+  print "Function got value",val+1
+   
+add_one(1)
+
+Parameterized function with a return statement: Functions can also receive parameters and return values (using the “return” keyword).
+
+def add_one(val):
+  print "Function got value", val
+  return val + 1
+value = add_one(1)
+print value
