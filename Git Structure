@@ -1,0 +1,82 @@
+Git Repository Structure
+
+Every Git repository has a structure. It is important to learn about a Git repository structure if you are going to learn how to use the program to its fullest potential. If you aren’t sure how Git structures or the repository content, then check out the structured Git repository layout below.
+
+Git is a pretty advanced system. It is s a free and open-source distributed version control system designed to handle everything from small projects to very large projects. It gives you the ability to do this with speed and efficiency.
+
+Once all the commands and functions, then you will better understand the Git repository structure. Below, you will see how the repository structure is set up. Therefore, this should give you a better idea of how it functions and what it looks like.
+
+Here is a Git Repository Structure
+You will see that a .git directory has a similar structure to the layout below.
+
+– objects/ folder 
+This directory stores data of your Git objects. Likewise, this includes all the contents of the files you have ever checked in, your commits, trees and tag objects.
+
+   – – objects/[0-9a-f][0-9a-f] folders
+A newly created object is stored in its own file. The objects are placed over 256 subdirectories using the first two characters of the SHA1 object name to keep the number of directory entries in objects itself to a manageable number. Further, objects found here are often called unpacked or loose objects.
+
+   – – objects/pack folder
+This directory stores files that store many objects in compressed form, along with index files to allow them to be randomly accessed.
+
+ – – objects/info folder
+Additional information about the object stored is placed in this directory.
+
+– refs folder
+This directory stores references in subdirectories. The Git prune command knows to preserve objects reachable from refs found in this directory and its subdirectories.
+
+   – – refs/heads/ folder
+This directory contains commit objects.
+
+   – – refs/tags/ folder
+Contains any object name.
+
+   – – refs/remotes/ folder
+This is where commit objects of branches copied from a remote repository are stored.
+
+– packed-refs file
+The file consists of packed heads and tags. It is useful for efficient repository access.
+
+– HEAD file
+This file holds a reference to the branch you are currently on. This tells Git what to use as the parent of your next commit.
+
+– config file
+This is the main Git configuration file. It keeps specific Git options for your project, such as your remotes, push configurations, tracking branches and more. Your configuration will load first from this file. Then, from a ~/.gitconfig file and then from an /etc/gitconfig file, if they exist.
+
+– branches
+This is a deprecated way to store shorthands to specify a URL to Git fetch, Git pull and Git push. This mechanism is legacy and it’s not likely you’ll find it in modern repositories. Still, you may find it useful if you are not running a modern repository.
+
+– hooks folder
+You can find shell scripts that are invoked after the corresponding Git commands in this directory. For example, after you run a commit, Git will try to execute the post-commit script.
+
+– index file
+The Git index is a staging area between your working directory and your repository. You can use the index to build up a set of changes that you want to commit together.
+
+When you create a commit, what is committed is what is currently in the index, not what is in your working directory. It is a binary file containing a sorted list of pathnames, each with permissions and the SHA-1 of a blob object.
+
+– info folder
+ This directory records any additional information regarding the repository.
+
+– remotes folder
+This folder contains shorthands for URL and default refnames for use when interacting with remote repositories via Git fetch, Git pull and Git push commands. This mechanism is legacy and it’s not likely you’ll find it in modern repositories. Again though, it may be useful to you.
+
+– logs folder
+Stores all changes made to refs in repository.
+
+   – – logs/refs/heads/ folder
+This records all changes made to the different branch tips.
+
+  – – logs/refs/tags/ folder
+This records all changes made to the different tags.
+
+– modules folder
+Contains all the git-repositories of the submodules.
+
+– worktrees folder
+Contains administrative data for linked working trees. Each subdirectory contains the working tree-related part of a linked working tree.
+
+Final Thoughts
+The Git system is a massive program that can help you perform hundreds of tasks. When you learn how to use it correctly, it will save you time and effort when trying to put something together. This is especially true when you have multiple people working on a project.
+
+Above is the rundown of a Git repository structure. Once you learn it and understand how the layout works, and then learn about Git commands, it will make using Git much easier. As a result, you’ll have greater efficiency when working.
+
+Good luck!
