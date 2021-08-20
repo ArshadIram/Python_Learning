@@ -1,0 +1,52 @@
+Understanding self and __init__ method in python Class.
+
+Class :
+Class is a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality.
+
+In technical terms we can say that class is a blue print for individual objects with exact behaviour.
+
+Object :
+object is one of instances of the class. which can perform the functionalities which are defined in the class.
+
+self :
+self represents the instance of the class. By using the "self" keyword we can access the attributes and methods of the class in python.
+
+__init__ :
+"__init__" is a reseved method in python classes. It is known as a constructor in object oriented concepts. 
+This method called when an object is created from the class and it allow the class to initialize the attributes of a class.
+
+How can we use  "__init__ " ?
+
+Let's consider that you are creating a NFS game. for that we should have a car. 
+Car can have attributes like "color", "company", "speed_limit" etc. and methods like "change_gear", "start", "accelarate", "move" etc.
+
+class Car(object):
+  """
+    blueprint for car
+  """
+
+  def __init__(self, model, color, company, speed_limit):
+    self.color = color
+    self.company = company
+    self.speed_limit = speed_limit
+    self.model = model
+
+  def start(self):
+    print("started")
+
+  def stop(self):
+    print("stopped")
+
+  def accelarate(self):
+    print("accelarating...")
+    "accelarator functionality here"
+
+  def change_gear(self, gear_type):
+    print("gear changed")
+    " gear related functionality here"
+    
+    
+    Create different objects:
+    
+ maruthi_suzuki = Car("ertiga", "black", "suzuki", 60)
+audi = Car("A6", "red", "audi", 80)
