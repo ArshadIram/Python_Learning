@@ -1,0 +1,30 @@
+Write a function to revserse the string by swaping index method. 
+
+def swap_revserse(a):
+	length = len(a)
+	left = a[0]
+	print("left", left)
+	right = a[-1]
+	print("right", right)
+	temp = 0
+
+	for i in range(length):
+		if i < right-1:
+			temp=a[i]
+			a[i]=a[right-1]
+			a[right-1] =temp
+			right = right-1
+	return a
+  
+  
+  Write a function to revsere the string by auxliary array method 
+  
+  def revserse(s):
+	resverse_list = []
+	length = len(s)-1
+	while length >=0:
+		resverse_list += s[length]
+		length -= 1
+	return resverse_list
+  
+  
